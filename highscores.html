@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="OSRS Username Checker, OSRS Highscores, OSRS Calculator, 2007scape Tools, Development, Programs, and features.">
+  <meta name="keywords" content="Username, Checker, Username Checker, Highscores, OSRS, 2007scape, Oldschool, Old, School, Runescape, Scape, Easy, Programs, Calculator, Calculators, Rune, Quests, MMO, Tool, Tools">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	
+	<!-- Username Checker -->
+	<script src="/js/highscores.js"></script>
+	<link rel="stylesheet" href="/css/username-custom.css">
+	<link rel="stylesheet" href="/css/mobile.css">
+	
+	<title>2007Scape - Highscores</title>
+
+</head>
+
+<body>
+	
+	<div class="wrapper-07">
+	<div class="content-07">
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded nav-07">
+			<button class="navbar-toggler navbar-toggler-center" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="/">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="username">Username Checker</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Highscores</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Calculators</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="">Coming Soon</a>
+				</li>
+				</ul>
+			</div>
+		</nav>
+	<div class="mobile-07">
+		<h1 class="title-header">Highscores</h1>
+		<p id="availability">Please Enter a Username</p>
+		<form name="usernamechecker" class="navbar-form form-07" role="search">
+			<div class="form-group">
+				<input maxlength="12" id="username" style="margin-bottom: 20px;" type="text" class="form-control" placeholder="Username"><br>
+				<button id="SEASONAL" formaction="JavaScript:getHighScores('SEASONAL')" type="submit" class="btn btn-sm btn-secondary">Deadman Seasonal</button>
+				<button id="REGULAR" formaction="JavaScript:getHighScores('REGULAR')" type="submit" class="btn btn-sm btn-success">Regular</button>
+				<button id="IRON" formaction="JavaScript:getHighScores('IRON')" type="submit" class="btn btn-sm btn-primary">Iron Man</button>
+				<button id="ULTIMATE" formaction="JavaScript:getHighScores('ULTIMATE')" type="submit" class="btn btn-sm btn-secondary">Ultimate Iron Man</button>
+				<button id="HARDCORE" formaction="JavaScript:getHighScores('HARDCORE')" type="submit" class="btn btn-sm btn-danger">Hardcore Iron Man</button>
+			</div>
+		</form>
+<div id="highscores" class="container" style="height: 0px;">
+  <div id="highscore_top" class="row">
+    <div class="col">
+		<p id="attack"></p>
+    </div>
+    <div class="col">
+		<p id="defence"></p>
+    </div>
+    <div class="col">
+		<p id="strength"></p>
+    </div>
+    <div class="col">
+		<p id="hitpoints"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+		<p id="ranged"></p>
+    </div>
+    <div class="col">
+		<p id="prayer"></p>
+    </div>
+    <div class="col">
+		<p id="magic"></p>
+    </div>
+    <div class="col">
+		<p id="cooking"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+		<p id="woodcutting"></p>
+    </div>
+    <div class="col">
+		<p id="fletching"></p>
+    </div>
+    <div class="col">
+		<p id="fishing"></p>
+    </div>
+    <div class="col">
+		<p id="firemaking"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+		<p id="crafting"></p>
+    </div>
+    <div class="col">
+		<p id="smithing"></p>
+    </div>
+    <div class="col">
+		<p id="mining"></p>
+    </div>
+    <div class="col">
+		<p id="herblore"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+		<p id="agility"></p>
+    </div>
+    <div class="col">
+		<p id="thieving"></p>
+    </div>
+    <div class="col">
+		<p id="slayer"></p>
+    </div>
+    <div class="col">
+		<p id="farming"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+		<p id="runecrafting"></p>
+    </div>
+    <div class="col">
+		<p id="hunter"></p>
+    </div>
+    <div class="col">
+		<p id="construction"></p>
+    </div>
+  </div>
+</div>
+	</div>
+	</div>
+		<p style="color: #525252; margin-top: 2%; text-align: center;">© Demonly - Feel free to message me in-game</p>
+	</div>
+	
+</body>
+
+</html>
